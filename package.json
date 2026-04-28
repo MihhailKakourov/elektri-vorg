@@ -1,0 +1,18 @@
+{
+  "name": "power-bot-mihhail-eduard",
+  "version": "1.0.0",
+  "description": "Smart boiler controller based on Nord Pool electricity prices via Elering API",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --watch index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Apache-2.0",
+  "type": "commonjs",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}
