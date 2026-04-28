@@ -92,6 +92,15 @@ app.get('/health', (_req, res) => {
   res.json({ ok: true, uptime: process.uptime() });
 });
 
+// Test endpoint: simulate an API error for Grafana dashboard testing
+app.get('/api/test/error', (_req, res) => {
+  log('ERROR', {
+    service: 'power-bot-mihhail-eduard',
+    message: 'Test error: simulated Elering API failure',
+  });
+  res.json({ triggered: true });
+});
+
 // ── Start ────────────────────────────────────────────────────────
 app.listen(PORT, async () => {
   console.log(`[power-bot-mihhail-eduard] Listening on http://localhost:${PORT}`);
